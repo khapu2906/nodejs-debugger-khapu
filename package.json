@@ -1,26 +1,28 @@
 {
-  "name": "khapu-debuger",
+  "name": "khapu-debugger",
   "version": "1.0.1",
-  "description": "The package is made to debuger easylier",
+  "description": "The package is made to debug easylier",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khapuonstage/-debuger-node.git"
+    "url": "git+https://github.com/khapu2906/nodejs-debugger-khapu.git"
+  },
+  "bin": {
+    "khapu-debugger": "commands/khapu.js"
   },
   "keywords": [
     "node",
-    "debuger",
-    "debuger",
+    "debugger",
+    "debug",
     "node",
-    "debuger"
   ],
   "author": "Khapu <khapuonstage@gmail.com",
   "license": "(ISC) MIT",
   "bugs": {
-    "url": "https://github.com/khapuonstage/-debuger-node/issues"
+    "url": "https://github.com/khapu2906/nodejs-debugger-khapu/issues"
   },
-  "homepage": "https://github.com/khapuonstage/-debuger-node#readme"
+  "homepage": "https://github.com/khapu2906/nodejs-debugger-khapu#readme"
 }
