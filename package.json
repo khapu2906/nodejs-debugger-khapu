@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/khapu2906/nodejs-debugger-khapu.git"
   },
+  "bin": {
+    "khapu-debugger": "commands/khapu.js"
+  },
   "keywords": [
     "node",
     "debuger",
