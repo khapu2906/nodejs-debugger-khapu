@@ -31,3 +31,6 @@ function ass () {
 }
 
 khapuDebug.show(value);
+
+const test = 1 + 1;
+console.log(test);
