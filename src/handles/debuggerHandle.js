@@ -81,36 +81,37 @@ class DebuggerHandle
         for (let i = 0; i < level; i++) {
             space += '  ';
         }
-    
-        for (const [key, value] of Object.entries(values)) {
-            const keyNew = space + key;
-            switch (typeof (value)) {
-                case 'object':
+        if (values !== null && typeof values !== undefined) {
+            for (const [key, value] of Object.entries(values)) {
+                const keyNew = space + key;
+                switch (typeof (value)) {
+                    case 'object':
+                        if (Array.isArray(value)) {
+                            this.#array(keyNew);
+                        } else {
+                            this.#object(keyNew);
+                        }
+                        this.handle(value, level + 1, showFunction);
+                        break;
+                    case 'number': 
+                        this.#number(keyNew, value);
+                        break;
+                    case 'function':
+                        this.#function(space, key, value, showFunction);
+                        break;
+                    default:
+                        this.#text(keyNew, value);
+                        break;
+                }
+                if (typeof (value) === 'object') {
                     if (Array.isArray(value)) {
-                        this.#array(keyNew);
+                        space = space.slice(0, -1); 
+                        const reset = configs.colorGroup.fashion.reset;
+                        const close = configs.colorGroup.foreground.red;
+                        console.log(`${close}${space}]${reset},`);
                     } else {
-                        this.#object(keyNew);
+                        console.log(`${space}},`);
                     }
-                    this.handle(value, level + 1, showFunction);
-                    break;
-                case 'number': 
-                    this.#number(keyNew, value);
-                    break;
-                case 'function':
-                    this.#function(space, key, value, showFunction);
-                    break;
-                default:
-                    this.#text(keyNew, value);
-                    break;
-            }
-            if (typeof (value) === 'object') {
-                if (Array.isArray(value)) {
-                    space = space.slice(0, -1); 
-                    const reset = configs.colorGroup.fashion.reset;
-                    const close = configs.colorGroup.foreground.red;
-                    console.log(`${close}${space}]${reset},`);
-                } else {
-                    console.log(`${space}},`);
                 }
             }
         }

@@ -1,6 +1,6 @@
 {
   "name": "khapu-debugger",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "The package is made to debug easylier",
   "main": "src/index.js",
   "scripts": {
@@ -17,10 +17,10 @@
     "node",
     "debugger",
     "debug",
-    "node",
+    "node"
   ],
   "author": "Khapu <khapuonstage@gmail.com",
-  "license": "(ISC) MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/khapu2906/nodejs-debugger-khapu/issues"
   },
