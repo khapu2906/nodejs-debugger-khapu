@@ -11,6 +11,62 @@ const value = {
                             testknahanha: {
                                 kahanhhhh: {
                                     llllaaZ: "123323"
+                                },
+                                tes11: {
+                                    testttt1239489: {
+                                        testknahanha: {
+                                            kahanhhhh: {
+                                                llllaaZ: "123323"
+                                            },
+                                            tes11: {
+                                                testttt1239489: {
+                                                    testknahanha: {
+                                                        kahanhhhh: {
+                                                            llllaaZ: "123323",
+                                                            tes11: {
+                                                                testttt1239489: {
+                                                                    testknahanha: {
+                                                                        kahanhhhh: {
+                                                                            llllaaZ: "123323",
+                                                                            tes11: {
+                                                                                testttt1239489: {
+                                                                                    testknahanha: {
+                                                                                        kahanhhhh: {
+                                                                                            llllaaZ: "123323",
+                                                                                            llllaaZ1: "123323",
+                                                                                            llllaaZ2: "123323",
+                                                                                            llllaaZ3: "123323",
+                                                                                            llllaaZ4: "123323",
+                                                                                            llllaaZ5: "123323",
+                                                                                            llllaaZ6: "123323",
+                                                                                            llllaaZ7: "123323",
+                                                                                            llllaaZ8: "123323",
+                                                                                            llllaaZ9: "123323",
+                                                                                            llllaaZ0: "123323",
+                                                                                            llllaaZa: "123323",
+                                                                                            llllaaZs: "123323",
+                                                                                            llllaaZd: "123323",
+                                                                                            llllaaZx: "123323",
+                                                                                            llllaaZz: "123323",
+                                                                                            llllaaZx: "123323",
+                                                                                            llllaaZv: "123323",
+                                                                                            llllaaZb: "123323",
+                                                                                            llllaaZg: "123323",
+                                                                                            llllaaZd: "123323",
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -30,7 +86,7 @@ function ass () {
     return 1 + 1;
 }
 
-khapuDebug.show(value, true);
+khapuDebug.show(value, {debug: true, showFunction: false});
 
 const test = 1 + 1;
 console.log(test);
