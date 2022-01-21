@@ -1,5 +1,5 @@
 {
-  "name": "debuger-node",
+  "name": "debugger-node",
   "version": "1.0.0",
   "description": "The package is made to debuger easylier",
   "main": "src/index.js",
