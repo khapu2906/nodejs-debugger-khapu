@@ -30,7 +30,7 @@ function ass () {
     return 1 + 1;
 }
 
-khapuDebug.show(value);
+khapuDebug.show(value, true);
 
 const test = 1 + 1;
 console.log(test);

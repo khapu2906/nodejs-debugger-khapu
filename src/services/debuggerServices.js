@@ -9,7 +9,7 @@ module.exports  = {
         console.log("______________________________END_______________________________");
         console.log("");
         if (debug) {
-            debugger;
+            process.exit();
         }
     },
 }
