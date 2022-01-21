@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khapuonstage/-debuger-node.git"
+    "url": "git+https://github.com/khapu2906/nodejs-debugger-khapu.git"
   },
   "keywords": [
     "node",
@@ -20,7 +20,7 @@
   "author": "Khapu <khapuonstage@gmail.com",
   "license": "(ISC) MIT",
   "bugs": {
-    "url": "https://github.com/khapuonstage/-debuger-node/issues"
+    "url": "https://github.com/khapu2906/nodejs-debugger-khapu/issues"
   },
-  "homepage": "https://github.com/khapuonstage/-debuger-node#readme"
+  "homepage": "https://github.com/khapu2906/nodejs-debugger-khapu#readme"
 }
