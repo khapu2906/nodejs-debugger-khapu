@@ -1,29 +1,27 @@
 const configs = require('./../configs/config');
+const reset = configs.colorGroup.fashion.reset;
+
 class DebuggerHandle 
 {
     #object(key) {
         const color = configs.colorGroup.foreground.yellow;
-        const reset = configs.colorGroup.fashion.reset;
         console.log(`${color}${key}${reset}: {`);
     }
 
     #array(key) {
         const color = configs.colorGroup.foreground.yellow;
-        const reset = configs.colorGroup.fashion.reset;
         const open = configs.colorGroup.foreground.red;
         console.log(`${color}${key}${reset}: ${open}[`);
     }
 
     #number(key, value) {
         const color = configs.colorGroup.foreground.yellow;
-        const reset = configs.colorGroup.fashion.reset;
         const valueColor = configs.colorGroup.foreground.blue;
         console.log(`${color}${key}${reset}: ${valueColor}${value}${reset},`);
     }
 
     #text(key, value) {
         const color = configs.colorGroup.foreground.yellow;
-        const reset = configs.colorGroup.fashion.reset;
         const valueColor = configs.colorGroup.foreground.white;
         console.log(`${color}${key}${reset}: ${valueColor}${value}${reset},`);
 
@@ -31,7 +29,6 @@ class DebuggerHandle
 
     #function(space, key, value, showFunction) {
         const color = configs.colorGroup.foreground.yellow;
-        const reset = configs.colorGroup.fashion.reset;
         let valueColor = configs.colorGroup.foreground.cyan;
         const background = configs.colorGroup.background.white;
         if (showFunction) {
@@ -60,10 +57,10 @@ class DebuggerHandle
             console.log(`${color}${space + key}${reset}:${valueColor}[FUNCTION: ${value.name}]${reset},`);
         }
     }
-    #classify(value, level, showFunction) {
+    #classify(value, level, showFunction, showLevel) {
         switch (typeof (value)) {
             case 'object':
-                this.#handleObject(value, level + 1, showFunction);
+                this.#handleObject(value, level, showFunction, showLevel);
                 break;
             case 'number': 
                 this.#number('number', value);
@@ -76,8 +73,14 @@ class DebuggerHandle
                 break;
         }
     }
-    #handleObject(values, level, showFunction) {
+    #handleObject(values, level, showFunction, showLevel) {
         let space = '';
+
+        // console.log(showLevel, level);
+        if (showLevel !== null && showLevel > 0 && level == showLevel) {
+            return false;
+        }
+
         for (let i = 0; i < level; i++) {
             space += '  ';
         }
@@ -91,7 +94,7 @@ class DebuggerHandle
                         } else {
                             this.#object(keyNew);
                         }
-                        this.handle(value, level + 1, showFunction);
+                        this.#handleObject(value, level + 1, showFunction, showLevel);
                         break;
                     case 'number': 
                         this.#number(keyNew, value);
@@ -105,7 +108,6 @@ class DebuggerHandle
                 }
                 if (typeof (value) === 'object') {
                     if (Array.isArray(value)) {
-                        space = space.slice(0, -1); 
                         const reset = configs.colorGroup.fashion.reset;
                         const close = configs.colorGroup.foreground.red;
                         console.log(`${close}${space}]${reset},`);
@@ -116,8 +118,9 @@ class DebuggerHandle
             }
         }
     }
-    handle(values, level = 0, showFunction) {
-        this.#classify(values, level, showFunction)
+    handle(values, level = 0, showFunction, showLevel) {
+        this.#classify(values, level, showFunction, showLevel);
+        // this.#classify(values, level, showFunction, showLevel);
     }
 }
 

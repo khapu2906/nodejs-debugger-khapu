@@ -15,6 +15,7 @@ module.exports = {
             bright: "\x1b[1m",
             underscore: "\x1b[4m",
             blink: "\x1b[5m",
+            dim: "\x1b[6m",
             reverse: "\x1b[7m",
             hidden: "\x1b[8m",
         },
