@@ -1,2 +1,3 @@
 ./node_modules/
-./src/server.js/
+./src/server.js
+./src/meidas/
