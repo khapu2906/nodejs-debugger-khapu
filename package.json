@@ -1,6 +1,6 @@
 {
   "name": "khapu-debugger",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "The package is made to debug in an easier way",
   "main": "src/index.js",
   "scripts": {
