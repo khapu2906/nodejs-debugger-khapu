@@ -54,10 +54,10 @@ khapu.show(value)
 
 ```
 
-You can show with mutiple params
+You can show with multiple params
 
 ```js
-khapu.showMutiple([value, secondeValue])
+khapu.showMultiple([value, secondeValue])
 ```
 
 Set options to use
