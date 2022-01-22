@@ -1,4 +1,5 @@
-# khapu-debugger
+![alt](https://github.com/khapu2906/nodejs-debugger-khapu/blob/main/src/medias/logo.jpg)
+
 
 ---
 # Introduction
@@ -77,4 +78,20 @@ khapu.showMultiple([value, secondValue], options)
 ---
 # Demo results
 
+*For first paragraph code*
 
+![alt](https://github.com/khapu2906/nodejs-debugger-khapu/blob/main/src/medias/showNotConfig.jpg)
+
+*For seconde paragraph code*
+
+![alt](https://github.com/khapu2906/nodejs-debugger-khapu/blob/main/src/medias/showMutipleNotConfig.jpg)
+
+*For final paragraph code*
+
+![alt](https://github.com/khapu2906/nodejs-debugger-khapu/blob/main/src/medias/showWithConfig.jpg)
+
+---
+
+# Maintain
+
+* [Khapu](https://github.com/khapuonstage)
