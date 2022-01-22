@@ -1,7 +1,8 @@
 {
-  "name": "khapu-debuger",
-  "version": "1.0.1",
-  "description": "The package is made to debuger easylier",
+
+  "name": "khapu-debugger",
+  "version": "1.1.1",
+  "description": "The package is made to debug earlier",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,13 +16,12 @@
   },
   "keywords": [
     "node",
-    "debuger",
-    "debuger",
-    "node",
-    "debuger"
+    "debugger",
+    "debug",
+    "node"
   ],
   "author": "Khapu <khapuonstage@gmail.com",
-  "license": "(ISC) MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/khapu2906/nodejs-debugger-khapu/issues"
   },

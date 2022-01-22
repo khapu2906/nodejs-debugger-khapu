@@ -8,20 +8,21 @@ const reset = require('./../configs/config').colorGroup.fashion.reset;
 
 const debuggerServices  = {
     OPTIONS: {
+        stop: true,
         showFunction: false,
-        debug: true
+        showLevel: null
     },
     show: async (values, options = debuggerServices.OPTIONS) => {
         console.log(`${background}${color}*******************************************************************************${reset}`);
         console.log(`${blink}${background}${color}*                                  KHAPU LOG                                  *${reset}`);
         console.log(`${background}${color}*******************************************************************************${reset}`);
-        debuggerHandle.handle(values, 0, options.showFunction);
+        debuggerHandle.handle(values, 0, options.showFunction, options.showLevel);
         console.log("");
         console.log(`${color}*******************************************************************************${reset}`);
         console.log(`${blink}${color}*                                  END LOG                                    *${reset}`);
         console.log(`${color}*******************************************************************************${reset}`);
         console.log("");
-        if (options.debug) {
+        if (options.stop) {
             process.exit();
         }
     },
@@ -34,10 +35,9 @@ const debuggerServices  = {
             values.forEach((e) => {
                 count += 1;
                 console.log("");
-                debuggerHandle.handle(e, 0, options.showFunction);
+                debuggerHandle.handle(e, 0, options.showFunction, options.showLevel);
                 if (count < values.length) {
-                    console.log(`_______________________________________________________________________________`);
-                    console.log(`____________________________________NEXT_______________________________________`);
+                    console.log(`<<__________________________________NEXT_____________________________________>>`);
                 }
             });
         }
@@ -46,7 +46,7 @@ const debuggerServices  = {
         console.log(`${blink}${color}*                                  END LOG                                    *${reset}`);
         console.log(`${color}*******************************************************************************${reset}`);
         console.log("");
-        if (options.debug) {
+        if (options.stop) {
             process.exit();
         }
     }
